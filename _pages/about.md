@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in Economics at Universitat Pompeu Fabra (UPF), with a Master's in Economics from PUC-Rio. My research focuses on Development Economics and Policy Evaluation, with a particular interest in the Economics of Education.  
+I am a PhD student in Economics at Universitat Pompeu Fabra (UPF), with a Master's in Economics from PUC-Rio. My research focuses on Development Economics and Policy Evaluation, with a particular interest in the Economics of Education.
 
 For more information, please see my [CV](files/academic_CV_Gabriel_de_Campos.pdf).  
 
@@ -18,6 +18,3 @@ For more information, please see my [CV](files/academic_CV_Gabriel_de_Campos.pdf
 **PhD.**  Economics, UPF, Ongoing.  
 
 **MSc.** Economics, PUC-Rio, 2022.  
-
-**BA.**  Economics, FEA-USP, 2019.  
-
