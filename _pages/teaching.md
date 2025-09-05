@@ -12,8 +12,8 @@ author_profile: true
 {% endfor %}
 
 ## Teaching Assistant (TA)
-**2025, Spring - UPF.** Microeconomics I (undergraduated), Prof.  María Martin Rodriguez 
+**2025, Spring - UPF.** Microeconomics I (undergraduate), Prof.  María Martin Rodriguez 
 
-**2024, Winter - UPF.** Econometrics (undergraduated), Prof.  Pierre Magontier
+**2024, Winter - UPF.** Econometrics (undergraduate), Prof.  Pierre Magontier
 
 **2021 - PUC-Rio.** Microeconomics I (undergraduate), Prof. Juliano Assunção
