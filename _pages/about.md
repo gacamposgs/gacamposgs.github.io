@@ -18,3 +18,5 @@ For more information, please see my [CV](files/academic_CV_Gabriel_de_Campos.pdf
 **PhD.**  Economics, UPF, Ongoing.  
 
 **MSc.** Economics, PUC-Rio, 2022.  
+
+{% include academic_research.md %}
