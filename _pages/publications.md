@@ -5,6 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
+{% include academic_research.md %}
+
 ## Policy Research
 
 **2023.** Lichand, Guilherme; Kátia Schweickardt, Gabriel de Campos e Armando Simões “[Turmas
