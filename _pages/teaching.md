@@ -12,6 +12,10 @@ author_profile: true
 {% endfor %}
 
 ## Teaching Assistant (TA)
+**2025/2026 - BSE.** Econ Master Project (master)
+
+**2026, Winter - BSE.** Development Economics (master) -- Prof. Gianmarco Léon-Ciliotta and Vasily Korovkin 
+
 **2025, Spring - UPF.** Microeconomics I (undergraduate), Prof.  María Martin Rodriguez 
 
 **2024, Winter - UPF.** Econometrics (undergraduate), Prof.  Pierre Magontier
