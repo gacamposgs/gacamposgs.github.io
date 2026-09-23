@@ -1,6 +1,6 @@
 ## Working in Progress
 
-“When Educators Become Politicians”
+
 
 ## Working Papers
 
