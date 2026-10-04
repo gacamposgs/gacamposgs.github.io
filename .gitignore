@@ -12,6 +12,10 @@ local/
 /tips_academic_website.pdf
 /files/Provisional_Transcript_Gabriel.pdf
 
+# Personal editing guides stay in this checkout only
+/EDITING.md
+/content/README.md
+
 # Ignore the Gemfile that is generated
 Gemfile.lock
 
