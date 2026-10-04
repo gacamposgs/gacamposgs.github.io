@@ -1,0 +1,11 @@
+# The order of these entries is the order of the website menu.
+# For a new page, add its title and permalink here.
+main:
+  - title: Home
+    url: /
+  - title: Research
+    url: /publications/
+  - title: Teaching
+    url: /teaching/
+  - title: CV
+    url: /cv/

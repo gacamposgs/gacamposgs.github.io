@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Gabriel de Campos G. dos Santos"
+title                    : "Gabriel de Campos"
 title_separator          : "-"
 name                     : &name "Gabriel de Campos"
-description              : &description "My name is Gabriel"
+description              : &description "PhD student in Economics at Universitat Pompeu Fabra. Development Economics, Policy Evaluation, and Economics of Education."
 url                      : https://gacamposgs.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gacamposgs/gacamposgs.github.io"
@@ -124,11 +124,28 @@ author:
 
 
 # Reading Files
+data_dir: content/settings
+collections_dir: content
 include:
   - .htaccess
-  - _pages
   - files
 exclude:
+  - _archive
+  - content/templates
+  - content/settings
+  - content/README.md
+  - EDITING.md
+  - README.md
+  - tips_academic_website.pdf
+  - files/Provisional_Transcript_Gabriel.pdf
+  - scripts
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - CONTRIBUTING.md
+  - docker-compose.yaml
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -184,75 +201,26 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
+  papers:
     output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+    permalink: /research/:path/
 
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+  # Any new Markdown page automatically gets the personal site design.
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
-  # _teaching
+      layout: personal-page
+      author_profile: false
   - scope:
       path: ""
-      type: teaching
+      type: papers
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+      layout: paper
+      author_profile: false
 
 
 # Sass/SCSS

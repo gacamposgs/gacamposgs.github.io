@@ -1,0 +1,6 @@
+{% if include.paper.coauthors %}<p class="paper-coauthors">With {{ include.paper.coauthors | escape }}</p>{% endif %}
+{% if include.paper.venue %}
+  <p class="paper-venue"><em>{{ include.paper.venue | escape }}</em>{% if include.paper.year %} · {{ include.paper.year }}{% endif %}</p>
+{% elsif include.paper.year %}
+  <p class="paper-venue">{{ include.paper.year }}</p>
+{% endif %}

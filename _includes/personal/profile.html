@@ -1,0 +1,9 @@
+{% assign profile = site.data.profile %}
+<img class="portrait" src="{{ profile.photo | relative_url }}" alt="{{ profile.photo_alt | escape }}" width="1395" height="998" fetchpriority="high">
+<nav class="profile-links" aria-label="Contact and social links">
+  {% if profile.github %}<a href="{{ profile.github | escape }}" aria-label="GitHub" title="GitHub">{% include personal/social-icon.html icon='github' %}</a>{% endif %}
+  {% if profile.email %}<a href="mailto:{{ profile.email | escape }}" aria-label="Email Gabriel" title="Email">{% include personal/social-icon.html icon='mail' %}</a>{% endif %}
+  {% if profile.x %}<a href="{{ profile.x | escape }}" aria-label="X (Twitter)" title="X (Twitter)">{% include personal/social-icon.html icon='x' %}</a>{% endif %}
+  {% if profile.linkedin %}<a href="{{ profile.linkedin | escape }}" aria-label="LinkedIn" title="LinkedIn">{% include personal/social-icon.html icon='linkedin' %}</a>{% endif %}
+</nav>
+{% if profile.location %}<p class="profile-location">{{ profile.location | escape }}</p>{% endif %}

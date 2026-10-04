@@ -1,0 +1,19 @@
+---
+layout: personal
+---
+<div class="profile-grid">
+  <aside class="profile-photo" aria-label="Photo and contact links">
+    {% include personal/profile.html %}
+  </aside>
+  <section class="profile-intro" aria-label="About Gabriel">
+    <div class="markdown-content">{{ content }}</div>
+    <div class="research-interests">
+      <h2>Research interests</h2>
+      <ul>{% for interest in site.data.profile.research_interests %}<li>{{ interest | escape }}</li>{% endfor %}</ul>
+    </div>
+    <a class="text-action" href="{{ site.data.profile.cv | relative_url }}">View my CV <span aria-hidden="true">↗</span><span class="sr-only"> (PDF)</span></a>
+  </section>
+</div>
+<div class="homepage-research" aria-label="Research">
+  {% include personal/research-list.html categories='working-paper,work-in-progress,paper' show_empty='work-in-progress' %}
+</div>

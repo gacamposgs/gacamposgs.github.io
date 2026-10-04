@@ -1,0 +1,10 @@
+---
+layout: personal
+---
+<article class="content-page paper-page">
+  <a class="back-link" href="{{ '/publications/' | relative_url }}">← All research</a>
+  <h1 class="page-title">{{ page.title | escape }}</h1>
+  {% include personal/paper-meta.html paper=page %}
+  <div class="markdown-content">{{ content }}</div>
+  {% include personal/paper-links.html paper=page %}
+</article>

@@ -1,9 +1,16 @@
 # Ignore the contents of the _site directory and other cache directories
 _site/
 .sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+__pycache__/
 
 # Ignore the directory for local files during development
 local/
+
+# Local reference material and academic records (keep the public CV tracked)
+/tips_academic_website.pdf
+/files/Provisional_Transcript_Gabriel.pdf
 
 # Ignore the Gemfile that is generated
 Gemfile.lock

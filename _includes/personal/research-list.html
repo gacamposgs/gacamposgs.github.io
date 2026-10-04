@@ -1,0 +1,29 @@
+{% assign categories = include.categories | default: 'working-paper,work-in-progress,paper,policy' | split: ',' %}
+{% assign published_papers = site.papers | where_exp: 'paper', 'paper.published != false' %}
+{% for category in categories %}
+  {% assign papers = published_papers | where: 'category', category | sort: 'year' | reverse %}
+  {% if papers.size > 0 or category == include.show_empty %}
+    {% case category %}
+      {% when 'working-paper' %}{% assign group_title = 'Working papers' %}
+      {% when 'paper' %}{% assign group_title = 'Published papers' %}
+      {% when 'policy' %}{% assign group_title = 'Policy research' %}
+      {% when 'work-in-progress' %}{% assign group_title = 'Work in progress' %}
+    {% endcase %}
+    <section class="research-group" aria-labelledby="research-{{ category }}">
+      <h2 id="research-{{ category }}">{{ group_title }}</h2>
+      {% if papers.size > 0 %}<ul class="paper-list">
+        {% for paper in papers %}
+          <li class="paper-entry">
+            {% assign paper_href = paper.paper_url %}
+            {% assign paper_url_start = paper_href | slice: 0, 1 %}
+            {% if paper_url_start == '/' %}{% assign paper_href = paper_href | relative_url %}{% endif %}
+            <h3>{% if paper_href %}<a href="{{ paper_href | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}{% if paper.title_note %} <span class="paper-title-note">[{{ paper.title_note | escape }}]</span>{% endif %}</h3>
+            {% include personal/paper-meta.html paper=paper %}
+            {% if paper.summary %}<p class="paper-summary">{{ paper.summary | escape }}</p>{% endif %}
+            {% include personal/paper-links.html paper=paper coverage_only=true %}
+          </li>
+        {% endfor %}
+      </ul>{% endif %}
+    </section>
+  {% endif %}
+{% endfor %}

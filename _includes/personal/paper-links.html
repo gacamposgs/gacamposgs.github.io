@@ -1,0 +1,15 @@
+{% assign show_paper_link = false %}
+{% if include.paper.paper_url and include.coverage_only != true %}{% assign show_paper_link = true %}{% endif %}
+{% if show_paper_link or include.paper.coverage %}
+  <div class="paper-links">
+    {% if show_paper_link %}
+      {% assign paper_url_start = include.paper.paper_url | slice: 0, 1 %}
+      {% if paper_url_start == '/' %}{% assign paper_href = include.paper.paper_url | relative_url %}{% else %}{% assign paper_href = include.paper.paper_url %}{% endif %}
+      <a href="{{ paper_href | escape }}">{{ include.paper.paper_label | default: 'Read paper' | escape }} <span aria-hidden="true">↗</span></a>
+    {% endif %}
+    {% if include.paper.coverage %}
+      <span class="coverage-label">Media Coverage:</span>
+      {% for coverage in include.paper.coverage %}<a href="{{ coverage.url | escape }}">{{ coverage.label | escape }} <span aria-hidden="true">↗</span></a>{% endfor %}
+    {% endif %}
+  </div>
+{% endif %}
