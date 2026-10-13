@@ -93,7 +93,7 @@ author:
   employer         :
 #  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
 #  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : "gacamposgs@gmail.com"
+  email            : "gabriel.santos@upf.edu"
 #  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -134,6 +134,7 @@ exclude:
   - content/templates
   - content/settings
   - content/README.md
+  - AGENTS.md
   - EDITING.md
   - README.md
   - tips_academic_website.pdf

@@ -20,6 +20,12 @@
             <h3>{% if paper_href %}<a href="{{ paper_href | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}{% if paper.title_note %} <span class="paper-title-note">[{{ paper.title_note | escape }}]</span>{% endif %}</h3>
             {% include personal/paper-meta.html paper=paper %}
             {% if paper.summary %}<p class="paper-summary">{{ paper.summary | escape }}</p>{% endif %}
+            {% if paper.show_abstract %}
+              <details class="paper-abstract">
+                <summary>Abstract<span class="sr-only"> for {{ paper.title | escape }}</span><span class="abstract-toggle-icon" aria-hidden="true"></span></summary>
+                <div class="markdown-content abstract-content">{{ paper.content }}</div>
+              </details>
+            {% endif %}
             {% include personal/paper-links.html paper=paper coverage_only=true %}
           </li>
         {% endfor %}

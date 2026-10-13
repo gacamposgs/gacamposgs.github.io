@@ -7,9 +7,10 @@ layout: personal
   </aside>
   <section class="profile-intro" aria-label="About Gabriel">
     <div class="markdown-content">{{ content }}</div>
-    <div class="research-interests">
-      <h2>Research interests</h2>
-      <ul>{% for interest in site.data.profile.research_interests %}<li>{{ interest | escape }}</li>{% endfor %}</ul>
+    <div class="country-flags" aria-label="Brazil and Spain">
+      <img src="https://hatscripts.github.io/circle-flags/flags/br.svg" alt="Brazil" width="25" height="25">
+      <span aria-hidden="true">&#8644;</span>
+      <img src="https://hatscripts.github.io/circle-flags/flags/es.svg" alt="Spain" width="25" height="25">
     </div>
     <a class="text-action" href="{{ site.data.profile.cv | relative_url }}">View my CV <span aria-hidden="true">↗</span><span class="sr-only"> (PDF)</span></a>
   </section>

@@ -13,6 +13,7 @@ local/
 /files/Provisional_Transcript_Gabriel.pdf
 
 # Personal editing guides stay in this checkout only
+/AGENTS.md
 /EDITING.md
 /content/README.md
 
