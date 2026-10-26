@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Gabriel de Campos
 permalink: /
 description: PhD student in Economics at UPF, researching Development Economics, Policy Evaluation, and Economics of Education.
 redirect_from:
